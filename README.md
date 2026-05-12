@@ -1,2 +1,6 @@
 # IoT Bootcamp
-Rocky Linux + Git = Ready !
+## Tools 
+- Linux / Terminal
+- Git & Github
+## Author
+Me, PhetNK.
