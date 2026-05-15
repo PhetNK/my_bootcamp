@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 import requests
 
-res = requests.get("https://httpbin.org/get")
+params = {"Device":"sensor-01","location":"Bangkok"}
+headers = {
+"User-Agent":"IoTBot/1.0",
+"X-Api-Key":"test001"
+}
+
+res = requests.get("https://httpbin.org/get",params=params,headers=headers)
 
 data = res.json()
 
@@ -11,4 +17,8 @@ My IP: {data["origin"]}
 URL: {data["url"]}
 Headers: {data["headers"]}
 """
-print(output)
+
+print(f"""
+URL: {data["url"]}
+Headers seen by server: {data["headers"]}
+""")
