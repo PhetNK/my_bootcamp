@@ -21,7 +21,7 @@ post_data = update.json()
 
 report = f"""
 Server: {get_data["origin"]}
-Device: post_data["headers"]["device"]
+Device: {post_data["json"]["device"]}
 Temperature: {post_data["json"]["temp"]}
 Humidity: {post_data["json"]["hum"]}
 API Key used: {get_data["headers"]["X-Api-Key"]}
