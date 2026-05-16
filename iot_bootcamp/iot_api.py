@@ -13,13 +13,13 @@ def root():
 	return{
 		"message": "IoT API Server",
 		"version": "1.0",
-		"Status": "running"
+		"status": "running"
 	}
 
 @app.get("/device/{device_id}")
 def list_sensor(device_id: str):
 	return{
-		"device_id": {device_id},
+		"device_id": device_id,
 		"type": "Temperature",
 		"unit": "celsius"
 	}
